@@ -1,0 +1,69 @@
+.Header {
+  background-color: var(--bg-black);
+  margin: 0;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+}
+.Header .navbar-brand {
+  min-width: 8rem;
+  width: 25.4rem;
+}
+.Header .SearchButton {
+  border: none;
+  cursor: pointer;
+}
+
+.Header .SearchButton {
+  position: relative;
+}
+.Header .SearchButton button{
+  font-size: 3rem;
+  color: var(--white);
+}
+.Header .input-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.Header .input-wrapper input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  outline: none;
+}
+.Header .navbar-nav {
+  gap: 2rem;
+  align-items: center;
+}
+.Header .nav-link {
+  font-family: var(--ff-montserrat);
+  font-size: 1.96rem;
+  font-weight: 500;
+  line-height: 2.39rem;
+  color: var(--white);
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
+.Header .nav-link.active,
+.Header .nav-link:hover{
+    transition: all .3s ease;
+    color: var(--primary-yellow);
+}
+.Header .nav-link.active:hover{
+    transition: all .3s ease;
+    color: var(--white);
+}
+.Header .nav-item .ButtonMain {
+  background-color: var(--primary-yellow);
+  color: var(--white);
+}
+
+.Header .nav-item .ButtonMain:after {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px rgba(155, 148, 148, 0.133),
+    4px 4px 5px 0px rgba(179, 168, 168, 0.067);
+  transition: all 0.3s ease;
+}

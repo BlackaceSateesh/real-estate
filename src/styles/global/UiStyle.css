@@ -1,0 +1,139 @@
+.ButtonMain {
+  border-radius: 5px;
+  padding: 1.4rem 2.5rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  color: var(--black);
+  border: none;
+  font-family: var(--ff-plus-jakarta);
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ButtonMain:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.ButtonMain:hover {
+  color: #000;
+}
+.ButtonMain:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.ButtonMain:active {
+  top: 2px;
+}
+
+.section-left {
+  min-width: 94%;
+  max-width: 94%;
+  margin: 0;
+  padding: 0;
+}
+.para {
+  font-family: var(--ff-manrope);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 3rem;
+  text-align: justify;
+  color: var(--black);
+}
+.para.white {
+  color: var(--white);
+}
+
+.section-inner {
+  width: 80%;
+  margin: 5rem auto;
+}
+.big-heading {
+  font-family: var(--ff-satisfy);
+  font-size: 15rem;
+  font-weight: 400;
+  line-height: 20.11rem;
+  text-align: center;
+  color: var(--primary-yellow);
+}
+.big-heading.blck {
+  color: #101616;
+}
+@media (max-width: 1599px) {
+  .big-heading {
+    font-family: var(--ff-satisfy);
+    font-size: 12rem;
+    font-weight: 400;
+    line-height: 17.11rem;
+    text-align: center;
+    color: var(--primary-yellow);
+  }
+}
+
+.heading2 {
+  font-family: var(--ff-old);
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 6.4rem;
+  text-align: left;
+  color: #2d2e32;
+}
+
+.ylwTag {
+  font-family: var(--ff-open);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: 1.399999976158142px;
+  text-align: center;
+  color: var(--primary-yellow);
+}
+
+.BigButton {
+  min-width: 20rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: var(--bg-black);
+  font-family: var(--ff-inter);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  letter-spacing: -0.4399999976158142px;
+  text-align: center;
+  padding: 5rem;
+  transition: all 0.3s ease;
+}
+.BigButton img {
+  width: 6.8rem;
+}
+
+.BigButton:hover {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  transition: all 0.3s ease;
+}

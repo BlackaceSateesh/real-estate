@@ -1,0 +1,127 @@
+.PlanLayoutSection {
+  width: 100%;
+}
+.PlanLayoutSection .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.PlanLayoutSection .section-inner .top-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.PlanLayoutSection .section-inner .top-header .para {
+  font-family: var(--ff-open);
+  font-weight: 400;
+  color: #7b7b7b;
+}
+.PlanLayoutSection .section-inner .top-header .underline {
+  min-width: 6rem;
+  width: 6rem;
+}
+.PlanLayoutSection .inner-wrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  gap: 5%;
+}
+.PlanLayoutSection .inner-wrapper .left {
+  width: 50%;
+}
+.PlanLayoutSection .inner-wrapper .left .ImageSlider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.PlanLayoutSection .inner-wrapper .left .ImageSlider .slider__full-image,
+.PlanLayoutSection .inner-wrapper .left .ImageSlider .slider__thumbnails {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.PlanLayoutSection .inner-wrapper .left .ImageSlider .slider__list {
+    display: flex;
+    width: 100%;
+    gap: 1.2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.PlanLayoutSection .inner-wrapper .left .ImageSlider .slider__full-image iframe{
+    width: 100%;
+    min-height: 42rem;
+}
+.PlanLayoutSection
+  .inner-wrapper
+  .left
+  .ImageSlider
+  .slider__list
+  .slider__thumbnail {
+  min-width: 11rem;
+  width: 11rem;
+  height: 8rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid var(--white);
+}
+.PlanLayoutSection
+  .inner-wrapper
+  .left
+  .ImageSlider
+  .slider__list
+  .slider__thumbnail.active {
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-yellow);
+  border-radius: 4px;
+}
+.PlanLayoutSection
+  .inner-wrapper
+  .left
+  .ImageSlider
+  .slider__list
+  ul
+  .slider__thumbnail
+  img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.PlanLayoutSection .inner-wrapper .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.PlanLayoutSection .inner-wrapper .right .map-layout{
+    width: 90%;
+}
+.PlanLayoutSection .inner-wrapper .right .top-panel {
+  width: 100%;
+}
+.PlanLayoutSection .inner-wrapper .right .top-panel ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.PlanLayoutSection .inner-wrapper .right .top-panel ul li button{
+    font-family: var(--ff-open);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #2d2e32;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .6rem .8rem;
+}
+.PlanLayoutSection .inner-wrapper .right .top-panel ul li button.active{
+    color: var(--white);
+    background-color: var(--primary-yellow);
+}

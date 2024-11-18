@@ -1,0 +1,90 @@
+.Township {
+  width: 100%;
+  margin-top: 20rem;
+}
+.Township .inner {
+  width: 100%;
+  display: flex;
+  padding-left: 5%;
+  gap: 4rem;
+}
+.Township .inner .tab-panel {
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.Township .inner .tab-panel .head {
+  min-width: 20rem;
+}
+.Township .inner .tab-panel .panel-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.Township .inner .tab-panel .panel-wrapper .nav-link {
+  font-family: var(--ff-open);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #2d2e32;
+  padding: 0.6rem 1rem;
+}
+.Township .inner .tab-panel .panel-wrapper .nav-link.active {
+  background-color: var(--primary-yellow);
+  color: var(--white);
+}
+.TownshipContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.TownshipContent .right {
+  min-width: 40%;
+  width: 40%;
+}
+.TownshipContent .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.TownshipContent .left .heading2 span {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 6.7rem;
+  text-align: left;
+}
+.TownshipContent .left .subHeading {
+  font-style: italic;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+.TownshipContent .left .para {
+  font-family: var(--ff-open);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3.1rem;
+  color: #7b7b7b;
+}
+
+.TownshipContent .left .ylwTag {
+  text-align: left;
+  font-weight: 700;
+}
+.TownshipContent .left button {
+  font-family: var(--ff-open);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.9rem;
+  letter-spacing: 1.4691263437271118px;
+  padding: 1rem 2rem;
+  color: var(--white);
+  background-color: var(--primary-yellow);
+  margin-top: 2rem;
+}
