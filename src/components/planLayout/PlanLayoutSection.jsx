@@ -61,7 +61,7 @@ const PlanLayoutSection = () => {
   }, [activeTab]);
 
   return (
-    <div className="PlanLayoutSection">
+    <div className="PlanLayoutSection" id="plan">
       <div className="section-inner">
         <div className="top-header">
           <span className="ylwTag">OUR GALLERY</span>
@@ -74,11 +74,11 @@ const PlanLayoutSection = () => {
             <img src={underlinePng} alt="underline" />
           </div>
         </div>
-        <div className="inner-wrapper">
-          <div className="left">
+        <div className="inner-wrapper sm-flex-column">
+          <div className="left sm-w-100">
             <ImageSlider data={getSliderData()} tab={activeTab} />
           </div>
-          <div className="right">
+          <div className="right sm-w-100">
             <div className="top-panel">
               <ul>
                 <li>

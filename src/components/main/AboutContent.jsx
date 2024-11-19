@@ -3,8 +3,8 @@ const AboutContent = ({ data }) => {
     const content = data[0];
   return (
     <>
-      <div className="AboutContent">
-        <div className="left">
+      <div className="AboutContent sm-flex-column">
+        <div className="left sm-w-100">
           <h1 className="heading2">{content?.heading}</h1>
           <h1 className="subHeading">{content?.subHeading}</h1>
           {content?.details?.map((e, i) => {
@@ -15,7 +15,7 @@ const AboutContent = ({ data }) => {
             );
           })}
         </div>
-        <div className="right">
+        <div className="right sm-w-100">
             <img src={content?.img} alt="" />
         </div>
       </div>

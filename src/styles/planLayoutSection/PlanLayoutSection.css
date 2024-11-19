@@ -125,3 +125,11 @@
     color: var(--white);
     background-color: var(--primary-yellow);
 }
+
+
+@media (max-width:499px) {
+  .PlanLayoutSection .inner-wrapper{
+    gap: 4rem;
+  }
+  
+}

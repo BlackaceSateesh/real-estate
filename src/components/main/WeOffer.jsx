@@ -42,7 +42,7 @@ const WeOffer = () => {
   ];
   return (
     <>
-      <div className="WeOffer">
+      <div className="WeOffer" id="we-offer">
         <div className="inner">
           <div className="top">
             <h4 className="big-heading">We Offer</h4>

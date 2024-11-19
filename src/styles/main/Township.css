@@ -24,7 +24,7 @@
   width: 100%;
   gap: 1rem;
 }
-.Township .inner .tab-panel .panel-wrapper .nav-link {
+.Township .inner .tab-panel .panel-wrapper .tab-item {
   font-family: var(--ff-open);
   font-size: 2rem;
   font-weight: 600;
@@ -34,8 +34,9 @@
   gap: 0.8rem;
   color: #2d2e32;
   padding: 0.6rem 1rem;
+  cursor: pointer;
 }
-.Township .inner .tab-panel .panel-wrapper .nav-link.active {
+.Township .inner .tab-panel .panel-wrapper .tab-item.active {
   background-color: var(--primary-yellow);
   color: var(--white);
 }
@@ -87,4 +88,20 @@
   color: var(--white);
   background-color: var(--primary-yellow);
   margin-top: 2rem;
+}
+
+@media (max-width: 499px) {
+  .Township {
+    margin-top: 0;
+  }
+  .Township .inner .tab-panel .head {
+    width: 16rem;
+  }
+  .TownshipContent .left .heading2 span {
+    font-size: 3rem;
+    line-height: 3.7rem;
+  }
+  .TownshipContent .left button {
+    margin: 2rem auto;
+  }
 }

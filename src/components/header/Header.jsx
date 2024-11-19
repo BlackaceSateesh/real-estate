@@ -1,68 +1,81 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { MainContent } from "../../constants/mainContent";
-import { AuthenticatedRoutes } from "../../constants/Routes";
-import { Link, useLocation } from "react-router-dom";
-import SearchButton from "../UI/SearchButton";
-import ButtonMain from "../UI/ButtonMain";
-import '../../styles/global/Header.css'
+import { useLocation } from 'react-router-dom';
+import { MainContent } from '../../constants/mainContent';
+import { AuthenticatedRoutes } from '../../constants/Routes';
+import SearchButton from '../UI/SearchButton';
+import ButtonMain from '../UI/ButtonMain';
+import '../../styles/global/Header.css';
+import { useState } from 'react';
 
 const Header = () => {
   const location = useLocation();
 
-  const isActive = (path) => (location.pathname === path ? "active" : "");
+  const isActive = (path) => (location.pathname === path ? 'active' : '');
 
   const navItems = [
     {
-      name: "PROJECTS",
-      link: AuthenticatedRoutes.HOME,
+      name: 'PROJECTS',
+      link: '#project',
     },
     {
-      name: "PRICING",
-      link: '',
+      name: 'PRICING',
+      link: '#plan',
     },
     {
-      name: "ABOUT",
-      link: '',
+      name: 'ABOUT',
+      link: '#about',
     },
     {
-      name: "CONTACT",
-      link: '',
+      name: 'CONTACT',
+      link: '#contact-us',
     },
   ];
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <Navbar expand="lg" className="Header">
-      <Container className="section-left">
-        <Navbar.Brand href={AuthenticatedRoutes.HOME}>
-          <img
-            src={MainContent.appLogo}
-            alt="App Logo"
-            className="appLogo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+    <header className="Header">
+      <div className="header-container">
+        {/* Logo */}
+        <a href={AuthenticatedRoutes.HOME} className="header-logo">
+          <img src={MainContent.appLogo} alt="App Logo" className="appLogo" />
+        </a>
+
+        {/* Mobile menu toggle button */}
+        <button
+          className="menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        {/* Navigation */}
+        <nav className={`nav ${isMobileMenuOpen ? 'active' : ''}`}>
+          <ul className="nav-list">
             {navItems.map((item, index) => (
-              <Nav.Link
-                key={`navItem${index}`}
-                as={Link}
-                to={item.link}
-                className={isActive(item.link)}
-              >
-                {item.name}
-              </Nav.Link>
+              <li key={`navItem${index}`} className="nav-item">
+                <a
+                  href={item.link}
+                  className={`nav-link ${isActive(item.link)}`}
+                >
+                  {item.name}
+                </a>
+              </li>
             ))}
-            <Nav.Item>
+            <li className="nav-item">
               <SearchButton />
-            </Nav.Item>
-            <Nav.Item>
+            </li>
+            <li className="nav-item">
               <ButtonMain name={'Login Now'} />
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 

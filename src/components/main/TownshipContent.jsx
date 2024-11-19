@@ -3,8 +3,8 @@ const TownshipContent = ({ data }) => {
   const content = data?.[0];
   return (
     <>
-      <div className="TownshipContent">
-        <div className="left">
+      <div className="TownshipContent sm-flex-column">
+        <div className="left sm-w-100">
           <h4 className="heading2">
             Taj Township: <span>{content?.heading}</span>{" "}
           </h4>
@@ -19,7 +19,7 @@ const TownshipContent = ({ data }) => {
           <h1 className="ylwTag">{content?.tagline}</h1>
           <button>Learn More</button>
         </div>
-        <div className="right">
+        <div className="right sm-w-100">
           <img src={content?.img} alt="" />
         </div>
       </div>

@@ -82,13 +82,71 @@
 .HeroSection .right {
   width: 60%;
 }
-.HeroSection .right .carousel-inner ,
-.HeroSection .right .carousel ,
+.HeroSection .right .carousel-inner,
+.HeroSection .right .carousel,
 .HeroSection .right .carousel-item .body-wrapper,
 .HeroSection .right .carousel-item .body-wrapper img,
 .HeroSection .right .carousel-item {
   height: 100%;
 }
+.HeroSection .right .carousel-item .body-wrapper {
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+}
 .HeroSection .right .carousel-indicators {
   display: none;
+}
+
+@media (max-width: 499px) {
+  .HeroSection .left,
+  .HeroSection .right {
+    min-width: 100%;
+    width: 100%;
+  }
+  .HeroSection .left .content .heading {
+    font-size: 5.8rem;
+    line-height: 7.2rem;
+  }
+  .HeroSection .left .carousel-content .carousel-ss-btns {
+    top: 112%;
+    flex-direction: row;
+    right: 0;
+    left: inherit;
+    height: fit-content;
+  }
+  .HeroSection .left .carousel-content .carousel-ss-btns .carousel-control {
+    box-shadow: rgba(86, 86, 86, 0.12) 0px 2px 4px 0px,
+      rgba(151, 156, 158, 0.32) 0px 2px 16px 0px;
+    min-width: 4rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .HeroSection .left .hltImg {
+    min-width: 16rem;
+    width: 16rem;
+  }
+  .HeroSection .right .carousel-item .body-wrapper {
+    border-radius: 0;
+  }
+}
+
+
+/* Carousel Custom Styling */
+.carousel-body-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease; /* Adding smooth fade transition */
+}
+
+/* Smooth fade effect for the image */
+.carousel-image.fade {
+  opacity: 0;
 }

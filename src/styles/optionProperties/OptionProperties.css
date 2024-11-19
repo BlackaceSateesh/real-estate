@@ -80,3 +80,34 @@
   width: 60%;
   margin-top: 2rem;
 }
+
+@media (max-width:499px){
+  .OptionProperties .inner-wrapper .OptionPropertiesCard{
+    min-width: 100%;
+    width: 100%;
+  }
+  .OptionProperties .inner-wrapper .OptionPropertiesCard{
+    top: 0 !important;
+  }
+  .OptionProperties .inner-wrapper .OptionPropertiesCard span{
+    font-size: 8rem;
+    line-height: 8rem;
+    letter-spacing: -4.5px;
+    top: -4rem !important;
+    right: 4rem !important;
+  }
+  .OptionProperties .inner-wrapper .OptionPropertiesCard .content h6{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .OptionProperties .inner-wrapper .OptionPropertiesCard .content p {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .OptionProperties .inner-wrapper .OptionPropertiesCard .imgBox{
+    width: 100% !important;
+  }
+  .OptionProperties .inner-wrapper{
+    gap: 8rem;
+  }
+}

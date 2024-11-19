@@ -1,4 +1,4 @@
-import { Nav, Tab } from "react-bootstrap";
+import { useState } from "react";
 import { AiOutlineShop } from "react-icons/ai";
 import { IoDiamondOutline, IoLocationOutline } from "react-icons/io5";
 import { PiSunBold } from "react-icons/pi";
@@ -77,6 +77,7 @@ const AboutSection = () => {
       ],
     },
   ];
+
   const facilities = [
     {
       icon: icon1,
@@ -119,62 +120,64 @@ const AboutSection = () => {
       desc: "Lorem ipsum proin vel velit auctor aliolli citudin",
     },
   ];
+
+  const [activeTab, setActiveTab] = useState(tabPanel?.[0]?.name?.replaceAll(" ", "_"));
+
+  const handleTabClick = (tabKey) => {
+    setActiveTab(tabKey);
+  };
+
   return (
-    <>
-      <div className="AboutSection">
-        <div className="section-inner">
-          <h4 className="big-heading">Find the project you love</h4>
+    <div className="AboutSection" id="project">
+      <div className="section-inner">
+        <h4 className="big-heading">Find the project you love</h4>
 
-          <Tab.Container
-            id="left-tabs-example"
-            className={"about-tab"}
-            defaultActiveKey={tabPanel?.[0]?.name?.replaceAll(" ", "_")}
-          >
-            <div className="tab-panel">
-              <Nav variant="pills" className="panel-wrapper">
-                {tabPanel?.map((e, i) => {
-                  return (
-                    <Nav.Item key={`panel${i}`}>
-                      <Nav.Link eventKey={e?.name?.replaceAll(" ", "_")}>
-                        {e?.icon} {e?.name}
-                      </Nav.Link>
-                    </Nav.Item>
-                  );
-                })}
-              </Nav>
-            </div>
-            <div className="tab-content">
-              <Tab.Content>
-                {tabPanel?.map((e, i) => {
-                  return (
-                    <Tab.Pane
-                      key={`content${i}`}
-                      eventKey={e?.name?.replaceAll(" ", "_")}
-                    >
-                      <AboutContent data={e?.data} />
-                    </Tab.Pane>
-                  );
-                })}
-              </Tab.Content>
-            </div>
-          </Tab.Container>
-
-          <div className="facilities">
-            {facilities?.map((e, i) => {
+        <div className="tab-panel">
+          <div className="panel-wrapper">
+            {tabPanel?.map((e, i) => {
+              const tabKey = e?.name?.replaceAll(" ", "_");
               return (
-                <div key={`fac${i}`} className="fac-card">
-                  <div className="icon">
-                    <img src={e?.icon} alt="" />
-                  </div>
-                  <h1>{e?.name}</h1>
-                  <p className="para">{e?.desc}</p>
+                <div
+                  key={`panel${i}`}
+                  className={`tab-item ${activeTab === tabKey ? "active" : ""}`}
+                  onClick={() => handleTabClick(tabKey)}
+                >
+                  {e?.icon} {e?.name}
                 </div>
               );
             })}
           </div>
         </div>
+
+        <div className="tab-content">
+          {tabPanel?.map((e, i) => {
+            const tabKey = e?.name?.replaceAll(" ", "_");
+            return (
+              <div
+                key={`content${i}`}
+                className={`tab-pane ${activeTab === tabKey ? "active" : ""}`}
+              >
+                <AboutContent data={e?.data} />
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="facilities" id="about">
+          {facilities?.map((e, i) => {
+            return (
+              <div key={`fac${i}`} className="fac-card">
+                <div className="icon">
+                  <img src={e?.icon} alt={e?.name} />
+                </div>
+                <h1>{e?.name}</h1>
+                <p className="para">{e?.desc}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

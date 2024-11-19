@@ -137,3 +137,34 @@
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   transition: all 0.3s ease;
 }
+
+@media (max-width: 999px) {
+  .sm-flex-column {
+    flex-direction: column !important;
+  }
+  .sm-w-100 {
+    width: 100% !important;
+  }
+  .big-heading {
+    font-size: 4rem;
+    line-height: 5.11rem;
+  }
+  .heading2 {
+    font-size: 4rem;
+    line-height: 4.4rem;
+  }
+}
+@media (max-width: 499px) {
+  .para {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+  .HeroSection .section-left {
+    gap: 2rem;
+  }
+  .BigButton {
+    min-width: 16rem;
+    width: 16rem;
+    height: 16rem;
+  }
+}

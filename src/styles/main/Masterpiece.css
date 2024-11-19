@@ -21,6 +21,9 @@
   border-radius: 10rem;
   padding: 2.2rem 4rem;
 }
+.Masterpiece .ButtonMain::after {
+  border-radius: 10rem;
+}
 
 .Masterpiece .inner-wrapper {
   width: 100%;
@@ -36,43 +39,69 @@
   width: 18%;
 }
 .Masterpiece .inner-wrapper .imgCardName span {
-    font-family: Times New Roman;
-    font-size: 3.5rem;
-    font-style: italic;
-    font-weight: 400;
+  font-family: Times New Roman;
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 400;
   line-height: 6.3rem;
   color: #252525;
   text-align: center;
   position: relative;
   padding-bottom: 2rem;
 }
-.Masterpiece .inner-wrapper .imgCardName span::before{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 60%;
-    height: 4px;
-    background-color: var(--primary-yellow);
-    content: "";
-    transform: translate(-50%, 0);
+.Masterpiece .inner-wrapper .imgCardName span::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 4px;
+  background-color: var(--primary-yellow);
+  content: "";
+  transform: translate(-50%, 0);
 }
-.Masterpiece .inner-wrapper .cardImg{
+.Masterpiece .inner-wrapper .cardImg {
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.Masterpiece .inner-wrapper .center {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+.Masterpiece .inner-wrapper .center .cardImg2 {
+  min-width: 31%;
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.Masterpiece .inner-wrapper .center .cardImg2:last-child {
+  justify-content: flex-end;
+}
+
+
+@media (max-width:499px){
+  .Masterpiece .para{
     width: 100%;
-    border-radius: 2rem;
-    overflow: hidden;
-}
-.Masterpiece .inner-wrapper .center{
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+  .Masterpiece .inner-wrapper{
+    flex-wrap: wrap;
+  }
+  .Masterpiece .inner-wrapper .imgCardName,
+  .Masterpiece .inner-wrapper .center .cardImg2 {
+    min-width: 100%;
     width: 100%;
-    display: flex;
-    gap: 2rem;
-}
-.Masterpiece .inner-wrapper .center .cardImg2{
-    min-width: 31%;
-    width: 31%;
-    display: flex;
+  }
+  .Masterpiece .inner-wrapper .center .cardImg2{
+    flex-direction: row;
+  }
+  .Masterpiece .inner-wrapper .center{
     flex-direction: column;
-    gap: 2rem;
-}
-.Masterpiece .inner-wrapper .center .cardImg2:last-child{
-    justify-content: flex-end;
+  }
+  .Masterpiece .inner-wrapper .cardImg{
+    width: 100%;
+  }
 }

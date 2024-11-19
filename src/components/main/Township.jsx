@@ -1,9 +1,9 @@
-import { Nav, Tab } from "react-bootstrap";
+import { useState } from "react";
 import { AiOutlineShop } from "react-icons/ai";
 import township from "../../assets/township1.png";
 import tajlogo from "../../assets/tajlogo.png";
 import TownshipContent from "./TownshipContent";
-import '../../styles/main/Township.css'
+import "../../styles/main/Township.css";
 
 const Township = () => {
   const tabPanel = [
@@ -80,49 +80,52 @@ const Township = () => {
       ],
     },
   ];
+
+  const [activeTab, setActiveTab] = useState(tabPanel?.[0]?.name?.replaceAll(" ", "_"));
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+
   return (
-    <>
-      <div className="Township">
-        <div className="inner">
-          <Tab.Container
-            id="left-tabs-example"
-            className={"about-tab"}
-            defaultActiveKey={tabPanel?.[0]?.name?.replaceAll(" ", "_")}
-          >
-            <div className="tab-panel">
-              <div className="head">
-                <img src={tajlogo} alt="" />
+    <div className="Township">
+      <div className="inner sm-flex-column">
+        <div className="tab-panel">
+          <div className="head">
+            <img src={tajlogo} alt="Taj Logo" />
+          </div>
+
+          <div className="panel-wrapper">
+            {tabPanel?.map((e, i) => {
+              const tabKey = e?.name?.replaceAll(" ", "_");
+              return (
+                <div
+                  key={`panel${i}`}
+                  className={`tab-item ${activeTab === tabKey ? "active" : ""}`}
+                  onClick={() => handleTabClick(tabKey)}
+                >
+                  {e?.icon} {e?.name}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="tab-content">
+          {tabPanel?.map((e, i) => {
+            const tabKey = e?.name?.replaceAll(" ", "_");
+            return (
+              <div
+                key={`content${i}`}
+                className={`tab-pane ${activeTab === tabKey ? "active" : ""}`}
+              >
+                <TownshipContent data={e?.data} />
               </div>
-              <Nav variant="pills" className="panel-wrapper">
-                {tabPanel?.map((e, i) => {
-                  return (
-                    <Nav.Item key={`panel${i}`}>
-                      <Nav.Link eventKey={e?.name?.replaceAll(" ", "_")}>
-                        {e?.icon} {e?.name}
-                      </Nav.Link>
-                    </Nav.Item>
-                  );
-                })}
-              </Nav>
-            </div>
-            <div className="tab-content">
-              <Tab.Content>
-                {tabPanel?.map((e, i) => {
-                  return (
-                    <Tab.Pane
-                      key={`content${i}`}
-                      eventKey={e?.name?.replaceAll(" ", "_")}
-                    >
-                      <TownshipContent data={e?.data} />
-                    </Tab.Pane>
-                  );
-                })}
-              </Tab.Content>
-            </div>
-          </Tab.Container>
+            );
+          })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
