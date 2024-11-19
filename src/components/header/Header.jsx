@@ -5,6 +5,7 @@ import SearchButton from '../UI/SearchButton';
 import ButtonMain from '../UI/ButtonMain';
 import '../../styles/global/Header.css';
 import { useState } from 'react';
+import { IoCloseSharp } from 'react-icons/io5';
 
 const Header = () => {
   const location = useLocation();
@@ -36,15 +37,18 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <header className="Header">
       <div className="header-container">
-        {/* Logo */}
         <a href={AuthenticatedRoutes.HOME} className="header-logo">
           <img src={MainContent.appLogo} alt="App Logo" className="appLogo" />
         </a>
 
-        {/* Mobile menu toggle button */}
+        {/* Mobile Menu Toggle */}
         <button
           className="menu-toggle"
           onClick={toggleMobileMenu}
@@ -53,14 +57,24 @@ const Header = () => {
           ☰
         </button>
 
-        {/* Navigation */}
+        {/* Navigation Menu */}
         <nav className={`nav ${isMobileMenuOpen ? 'active' : ''}`}>
+          {/* Close button */}
+          <button
+            className="menu-toggle-close"
+            onClick={toggleMobileMenu}
+            aria-label="Close navigation"
+          >
+            <IoCloseSharp />
+          </button>
+
           <ul className="nav-list">
             {navItems.map((item, index) => (
               <li key={`navItem${index}`} className="nav-item">
                 <a
                   href={item.link}
                   className={`nav-link ${isActive(item.link)}`}
+                  onClick={closeMobileMenu} // Close menu on link click
                 >
                   {item.name}
                 </a>

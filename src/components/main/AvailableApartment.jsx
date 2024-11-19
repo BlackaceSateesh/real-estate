@@ -59,8 +59,8 @@ const AvailableApartment = () => {
     <div className="AvailableApartment">
       <div className="section-inner">
         <h4 className="heading2">Available apartments at Taj Township</h4>
-        <div className="available-inner">
-          <div className="tab-panel">
+        <div className="available-inner sm-flex-column">
+          <div className="tab-panel sm-w-100">
             <div className="panel-wrapper">
               {tabPanel?.map((e, i) => {
                 const tabKey = e?.name?.replaceAll(" ", "_");
@@ -80,7 +80,7 @@ const AvailableApartment = () => {
             </div>
           </div>
 
-          <div className="tab-content">
+          <div className="tab-content sm-w-100">
             {tabPanel?.map((e, i) => {
               const tabKey = e?.name?.replaceAll(" ", "_");
               return (
@@ -88,11 +88,11 @@ const AvailableApartment = () => {
                   key={`content${i}`}
                   className={`tab-pane ${activeTab === tabKey ? "active" : ""}`}
                 >
-                  <div className="tab-inner">
-                    <div className="leftImg">
+                  <div className="tab-inner sm-flex-column sm-w-100">
+                    <div className="leftImg sm-w-100">
                       <img src={e?.img} alt={e?.name} />
                     </div>
-                    <div className="content">
+                    <div className="content sm-w-100">
                       <ul>
                         <li className="para">
                           Apartment area: {e?.apartmentArea}m<sup>2</sup>

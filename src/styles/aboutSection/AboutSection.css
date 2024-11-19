@@ -7,8 +7,10 @@
 }
 .AboutSection .tab-panel .panel-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  column-gap: 2%;
+  row-gap: 2rem;
   width: 100%;
 }
 .AboutSection .tab-panel .tab-item {
@@ -28,6 +30,12 @@
 .AboutSection .tab-panel .tab-item.active {
   background-color: var(--primary-yellow);
   color: var(--white);
+}
+.AboutSection .tab-pane{
+  display: none;
+}
+.AboutSection .tab-pane.active{
+  display: block;
 }
 .AboutSection .AboutContent {
   margin-top: 5rem;
@@ -102,6 +110,9 @@
   .AboutSection .facilities .fac-card{
     min-width: 47.5%;
     width: 47.5%;
+  }
+  .AboutSection .facilities {
+    margin: 4rem 0;
   }
   
 }

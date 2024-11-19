@@ -103,11 +103,16 @@
   .OptionProperties .inner-wrapper .OptionPropertiesCard .content p {
     font-size: 1.8rem;
     line-height: 2rem;
+    margin-top: 1rem;
   }
   .OptionProperties .inner-wrapper .OptionPropertiesCard .imgBox{
     width: 100% !important;
   }
   .OptionProperties .inner-wrapper{
     gap: 8rem;
+  }
+  .OptionProperties,
+  .OptionProperties .inner-wrapper{
+    margin-top: 4rem;
   }
 }

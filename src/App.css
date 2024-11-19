@@ -72,12 +72,18 @@ ol {
     font-size: 55%;
   }
 }
+@media (min-width: 299px) and (max-width: 1399px) {
+  html,
+  body {
+    font-size:48%;
+  }
+}
 
-@media (min-width: 299px) and (max-width: 799px) {
+@media (min-width: 299px) and (max-width: 1099px) {
 
   html,
   body {
-    font-size: 52%;
+    font-size: 42%;
   }
 }
 @media (min-width: 299px) and (max-width: 499px) {

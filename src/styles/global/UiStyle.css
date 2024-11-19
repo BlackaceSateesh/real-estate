@@ -140,6 +140,7 @@
 
 @media (max-width: 999px) {
   .sm-flex-column {
+    display: flex;
     flex-direction: column !important;
   }
   .sm-w-100 {
@@ -154,17 +155,44 @@
     line-height: 4.4rem;
   }
 }
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+
+@media (max-width: 1099px) {
+  .big-heading {
+    font-size: 9rem;
+    line-height: 13.11rem;
+  }
+  .section-inner {
+    width: 92%;
+  }
+}
+
 @media (max-width: 499px) {
+ 
   .para {
     font-size: 1.8rem;
     line-height: 2.6rem;
   }
-  .HeroSection .section-left {
-    gap: 2rem;
-  }
+
   .BigButton {
     min-width: 16rem;
     width: 16rem;
     height: 16rem;
   }
+  .section-left {
+    min-width: 100%;
+    width: 100%;
+  }
+  .section-inner {
+    width: 92%;
+  }
+  .big-heading {
+    font-size: 4rem;
+    line-height: 5.11rem;
+}
 }

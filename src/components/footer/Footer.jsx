@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="footer-inner">
         <div className="section-inner sm-flex-column">
           {/* Left Section: Logo, Description, Social Links */}
-          <div className="left">
+          <div className="left sm-w-100">
             <div className="appLogo">
               <img src={MainContent.appLogo} alt="App Logo" />
             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section: Links & Contact Info */}
-          <div className="right">
+          <div className="right sm-w-100">
             <ul className="links">
               <li>
                 <a href="#project" className="para">

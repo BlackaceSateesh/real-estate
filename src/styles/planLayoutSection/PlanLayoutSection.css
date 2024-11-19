@@ -53,6 +53,7 @@
 .PlanLayoutSection .inner-wrapper .left .ImageSlider .slider__full-image iframe{
     width: 100%;
     min-height: 42rem;
+    height: 42rem;
 }
 .PlanLayoutSection
   .inner-wrapper
@@ -130,6 +131,12 @@
 @media (max-width:499px) {
   .PlanLayoutSection .inner-wrapper{
     gap: 4rem;
+  }
+  
+}
+@media (min-width:799px) and (max-width:999px) {
+  .PlanLayoutSection .inner-wrapper .right{
+    margin-top: 4rem;
   }
   
 }

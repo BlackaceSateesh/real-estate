@@ -130,6 +130,7 @@
   .WeOffer .inner .top .ylwTag {
     width: 100%;
     text-align: center;
+    margin-top: 1.2rem;
   }
   .WeOffer .inner .inner-wrapper .offerCard {
     min-width: 100%;

@@ -97,20 +97,24 @@
   display: none;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 799px) {
   .HeroSection .left,
   .HeroSection .right {
     min-width: 100%;
     width: 100%;
   }
+  .HeroSection .left .content, .HeroSection .left .carousel-content{
+    padding: 2rem 1.4rem;
+  }
   .HeroSection .left .content .heading {
     font-size: 5.8rem;
     line-height: 7.2rem;
+    text-align: center;
   }
   .HeroSection .left .carousel-content .carousel-ss-btns {
-    top: 112%;
+    top: 115%;
     flex-direction: row;
-    right: 0;
+    right: 1rem;
     left: inherit;
     height: fit-content;
   }
@@ -128,8 +132,16 @@
   .HeroSection .right .carousel-item .body-wrapper {
     border-radius: 0;
   }
+  .HeroSection .left .content{
+    padding: 1.4rem;
+  }
+  .HeroSection .section-left {
+    gap: 2rem;
+  }
+  .HeroSection {
+    align-items: center;
+  }
 }
-
 
 /* Carousel Custom Styling */
 .carousel-body-wrapper {
