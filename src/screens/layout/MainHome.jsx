@@ -5,6 +5,7 @@ import AvailableApartment from "../../components/main/AvailableApartment";
 import HeroSection from "../../components/main/HeroSection";
 import Masterpiece from "../../components/main/Masterpiece";
 import OptionProperties from "../../components/main/OptionProperties";
+import TajParadise from "../../components/main/TajParadise";
 import Township from "../../components/main/Township";
 import WeOffer from "../../components/main/WeOffer";
 import PlanLayoutSection from "../../components/planLayout/PlanLayoutSection";
@@ -20,6 +21,7 @@ const MainHome = () => {
         <PlanLayoutSection />
         <OptionProperties />
         <Township />
+        <TajParadise />
         <Masterpiece />
         <WeOffer />
         <AvailableApartment />
